@@ -1,0 +1,123 @@
+// @mixin getStepNum($num) {
+//   @for $i from 1 through $num {
+//     &:nth-child(#{$i}) .circleContainer::after {
+//         content: #{$i};
+//       }
+//   }
+// }
+
+
+// .stepperPanel {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: start;
+//   flex:1;
+//   padding: 40px 0;
+  
+// }
+
+// .stepperContainer {
+//   display: flex;
+//   justify-content: space-evenly;
+//   & .checked .circleContainer::after {
+//     content: '\2714';
+//   }
+//   & .active {
+//       .circleContainer{
+//         background-color: black;
+//         color: aliceblue;
+//         border: none;
+//       }.labelContainer{
+//         color: black;
+//       }
+//   }
+// }
+
+// .step {
+//   // @include getStepNum(3);
+//     &:nth-child(1) .circleContainer::after {
+//       content: '1';}
+//     &:nth-child(2) .circleContainer::after {
+//       content: '2';
+//     }
+//     &:nth-child(3) .circleContainer::after {
+//       content: '3';
+//     }
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .circleContainer {
+//   width: 24px;
+//   height: 24px;
+//   border: 1px solid #ccc;
+//   color: #ccc;
+//   border-radius: 50%;
+// }
+
+// .labelContainer {
+//   text-align: center;
+//   color: #ccc;
+// }
+
+//步驟一二三、連結線
+.stepperContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.step {
+  position: relative;
+  &:nth-child(1) .circleContainer::after {
+    content: '1';
+  }
+  &:nth-child(2) .circleContainer::after {
+    content: '2';
+  }
+  &:nth-child(3) .circleContainer::after {
+    content: '3';
+  }
+    .circleContainer::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  .labelContainer {
+      display: none;
+    }
+  .circleContainer {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+  .connectLine {
+    display: block;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    top: 15px;
+    right: calc(50% + 50px);
+    left: calc(-450% + 15px);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .stepperContainer {
+    flex:1;
+  .step{
+    .labelContainer {
+        display: block;
+      }
+      .circleContainer::after {
+        position: static;
+        
+      }
+    }
+  }
+}

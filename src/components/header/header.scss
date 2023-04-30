@@ -1,0 +1,106 @@
+.navbar {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  .menu {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      transform: translate(-50%);
+      opacity: 0;
+      background-color: #fff;
+    }
+  
+    .hamburgerToggle:checked~.menu {
+      display: block;
+      z-index: 1;
+      transform: scale(1, 1);
+      opacity: 1;
+      height: 2000%;
+    }
+    .hamburgerToggle:checked~.tool {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+}
+
+.tool {
+z-index: 1;
+position: absolute;
+top: 480%;
+left: 36%;
+opacity: 0;
+}
+
+
+.headerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.hamburgerToggle {
+  opacity: 0;
+}
+
+.hamburger {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.logoTitle {
+  font-size: 20px;
+}
+
+@media screen and (min-width:768px) {
+
+  .hamburger {
+    display: none;
+      .menuItem {
+        opacity: 1;
+      }
+  }
+  .navbar {
+    width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3,2fr);
+      align-items: center;
+      gap: 10px;
+      padding-left:50px;
+      padding-right: 50px;
+      .menu {
+        display: block;
+        grid-column: 1/2;
+        width: auto;
+        position: static;
+        transform: none;
+        opacity: 1;
+      }
+      .hamburgerToggle {
+        display: none;
+      }
+    }
+  
+    .headerLogo {
+      grid-column: 2/3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .tool {
+      width: auto;
+      transform: none;
+      top: 0;
+      left: 0;
+      position: static;
+      opacity: 1;
+      grid-column: 3/4;
+    }
+}

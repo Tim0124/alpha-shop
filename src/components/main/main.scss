@@ -1,0 +1,16 @@
+.registerContainer {
+  position: relative;
+  .registerTitle {
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .mainContainer {
+    padding: 30px;
+    margin: 30px;
+    width: 100%;
+    display: flex;
+  }
+}
