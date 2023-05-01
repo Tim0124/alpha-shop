@@ -7,10 +7,39 @@
 }
 
 @media screen and (min-width:768px) {
+  .mainWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   .mainContainer {
-    padding: 30px;
-    margin: 30px;
-    width: 100%;
+    margin: 30px 5px;
     display: flex;
+    justify-content: space-between;
+    .leftContainer {
+      flex-grow: 1;
+      .registerContainer {
+        .registerTitle {
+          padding-left: 0;
+        }
+        .stepProgress {
+          width: 100%;
+        }
+      }
+    }
+    .rightContainer {
+      width: 50%;
+      min-width: 50%;
+      display: flex;
+      align-items: center;
+      
+      // margin-right: 30px;
+      .cartContainer {
+        width: 100%;
+      }
+      .cart {
+        width: 100%;
+      }
+    }
+    
   }
 }

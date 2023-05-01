@@ -19,7 +19,7 @@
       z-index: 1;
       transform: scale(1, 1);
       opacity: 1;
-      height: 2000%;
+      height: 450%;
     }
     .hamburgerToggle:checked~.tool {
       transform: scale(1, 1);
@@ -72,15 +72,16 @@ opacity: 0;
       grid-template-columns: repeat(3,2fr);
       align-items: center;
       gap: 10px;
-      padding-left:50px;
-      padding-right: 50px;
+      // padding-left:50px;
+      // padding-right: 50px;
       .menu {
-        display: block;
         grid-column: 1/2;
         width: auto;
         position: static;
         transform: none;
         opacity: 1;
+        display: flex;
+        justify-content: flex-start;
       }
       .hamburgerToggle {
         display: none;
@@ -102,5 +103,7 @@ opacity: 0;
       position: static;
       opacity: 1;
       grid-column: 3/4;
+      display: flex;
+      justify-content: flex-end;
     }
 }

@@ -71,6 +71,9 @@
 }
 
 .step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   &:nth-child(1) .circleContainer::after {
     content: '1';
@@ -84,7 +87,6 @@
     .circleContainer::after {
       position: absolute;
       top: 50%;
-      left: 50%;
       transform: translate(-50%,-50%);
     }
   .labelContainer {
@@ -97,26 +99,38 @@
     border-radius: 50%;
   }
   .connectLine {
-    display: block;
-    height: 3px;
+    display: flex;
+    height: 1px;
+    border-top:2px solid;
+    width: 80px;
+    max-width: 100%;
     background-color: #000;
-    position: absolute;
-    top: 15px;
-    right: calc(50% + 50px);
-    left: calc(-450% + 15px);
+    margin-left: 50px;
   }
 }
 
 @media screen and (min-width:768px) {
   .stepperContainer {
-    flex:1;
+    padding: 0;
+    width: 100%;
   .step{
+    gap: 10px;
     .labelContainer {
         display: block;
-      }
-      .circleContainer::after {
-        position: static;
         
+      }
+      .circleContainer{
+        width: 24px;
+        height: 24px;
+        
+      }
+      .connectLine {
+          max-width: 60px;
+          margin-left: 0;
+          // width: calc(80px - 60px);
+          margin-left: 15px;
+          margin-right: 10px;
+          flex-grow: 1;
       }
     }
   }
