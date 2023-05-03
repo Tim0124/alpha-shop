@@ -2,6 +2,9 @@ import './header.scss'
 import './menu.scss'
 import { ReactComponent as Logo } from './logo.svg';
 import { ReactComponent as Tool } from './tools.svg';
+import { ReactComponent as Search } from './search.svg';
+import { ReactComponent as Cart } from './cart.svg';
+import { ReactComponent as Mode } from './mode.svg';
 import { ReactComponent as Hamburger } from './hamburger.svg';
 import Menu from './menu.jsx'
 
@@ -21,7 +24,9 @@ import Menu from './menu.jsx'
           <h2 className='logoTitle'>ALPHA Shop</h2>
         </div>
         <div className="tool">
-          <Tool />  
+          <Search />
+          <Cart />
+          <Mode />
         </div>
         </nav>
       </header>

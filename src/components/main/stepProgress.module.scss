@@ -77,7 +77,6 @@
   align-items: center;
   position: relative;
   background-color:#fff;
-  padding: 10px;
   // &:nth-child(1) .circleContainer::after {
   //   content: '1';
   // }
@@ -99,7 +98,7 @@
   .circleContainer {
     width: 30px;
     height: 30px;
-    border: 1px solid black;
+    border: 1px solid #d8d8d8;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -108,19 +107,42 @@
 }
 
 .circleNumOne::after {
+  color:#fff ;
   content: '1';
 }
 .circleNumTwo::after {
+  color: #d8d8d8;
   content: '2';
 }
 .circleNumThree::after {
+  color: #d8d8d8;
   content: '3';
+}
+
+
+.circleNumOne{
+  background-color: #000;
+}
+
+.circleNumTwo {
+  color: #d8d8d8;
+
+}
+
+.circleNumThree {
+  color: #d8d8d8;
+
+}
+
+
+.stepTwo {
+  padding: 0 10%;
 }
 
 .connectLine {
   z-index: -1;
   position: absolute;
-  width: 50%;
+  width: 30%;
   height: 1px;
   border-top: 2px solid;
   background-color: #000;
@@ -134,6 +156,8 @@
 .lineTwo {
   left: 66%;
   transform: translateX(-50%);
+  color: #d8d8d8;
+  background-color: #d8d8d8;;
 }
 
 @media screen and (min-width:768px) {
@@ -149,11 +173,27 @@
         width: 24px;
         height: 24px;
       }
-      
+      .labelTwo,
+      .labelThree {
+        color: #d8d8d8;
+      }
+    }
+    .stepOne {
+      padding-right:5%;
+    }
+    .stepTwo {
+      padding: 0 5%;
+    }
+    .stepThree {
+      padding-right: 5%;
+      padding-left: 5%;
     }
     .connectLine {
       flex:1;
       width: 30%;
+    }
+    .labelContainer {
+
     }
   }
   
