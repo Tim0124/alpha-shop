@@ -19,7 +19,7 @@
       align-items: flex-end;
       .productControl {
           display: flex;
-          margin: 15px;
+          margin: 20px 0;
           justify-content: space-between;
           align-items: center;
       
@@ -30,7 +30,6 @@
         
     } 
     .price {
-      padding-right: 10px;
       text-align: right;
 
     }
