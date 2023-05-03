@@ -4,12 +4,45 @@ import Photo2 from './photo2.png'
 import { ReactComponent as Add } from './add.svg';
 import { ReactComponent as Reduce } from './reduce.svg';
 
-
+const initial =[
+  {
+    id: '1',
+    name: '貓咪罐罐',
+    img: 'https://picsum.photos/300/300?text=1',
+    price: 100,
+    quantity: 2,
+  },
+  {
+    id: '2',
+    name: '貓咪干干',
+    img: 'https://picsum.photos/300/300?text=2',
+    price: 200,
+    quantity: 1,
+  },
+]
+//使用map將資料取出
 function Cart () {
+  const items = initial.map(item => 
+    <div className='productContainer'>
+      <img src={item.img} alt={item.name} className='cartPhoto'/>
+      <div className="productInfo"  key={item.id}>
+        <div className="productControlContainer">
+          <div className="productName">{item.name}</div>
+          <div className="productControl">
+                <Reduce className='reduce'/>
+                  <div className="quantity">1</div>
+                <Add className='add'/>
+              </div>
+        </div>
+        <div className="price">{item.price}</div>
+      </div>
+    </div>
+  )
   return (
     <section className='cartWrapper'>
       <h3 className='cartTitle'>購物籃</h3>
-      <div className="productContainer">
+      {items}
+      {/* <div className="productContainer">
         <img src={Photo} alt={Photo} className='cartPhoto'/>
         <div className="productInfo">
           <div className="productControlContainer">
@@ -36,7 +69,7 @@ function Cart () {
           </div>
           <div className="price">$1,299</div>
         </div>
-      </div>
+      </div> */}
       <section className="cartInfo shipping">
         <div className="text">運費</div>
         <div className="price">免費</div>
