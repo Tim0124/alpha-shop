@@ -68,27 +68,31 @@
   align-items: center;
   padding: 0 20px;
   position: relative;
+  // gap: 20px;
 }
-
 .step {
+  width: fit-content;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: relative;
-  &:nth-child(1) .circleContainer::after {
-    content: '1';
-  }
-  &:nth-child(2) .circleContainer::after {
-    content: '2';
-  }
-  &:nth-child(3) .circleContainer::after {
-    content: '3';
-  }
-    .circleContainer::after {
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%,-50%);
-    }
+  background-color:#fff;
+  padding: 10px;
+  // &:nth-child(1) .circleContainer::after {
+  //   content: '1';
+  // }
+  // &:nth-child(2) .circleContainer::after {
+  //   content: '2';
+  // }
+  // &:nth-child(3) .circleContainer::after {
+  //   content: '3';
+  // }
+  
+    // .circleContainer::after {
+    //   position: absolute;
+    //   top: 50%;
+    //   transform: translate(-50%,-50%);
+    // }
   .labelContainer {
       display: none;
     }
@@ -97,16 +101,39 @@
     height: 30px;
     border: 1px solid black;
     border-radius: 50%;
-  }
-  .connectLine {
     display: flex;
-    height: 1px;
-    border-top:2px solid;
-    width: 80px;
-    max-width: 100%;
-    background-color: #000;
-    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
   }
+}
+
+.circleNumOne::after {
+  content: '1';
+}
+.circleNumTwo::after {
+  content: '2';
+}
+.circleNumThree::after {
+  content: '3';
+}
+
+.connectLine {
+  z-index: -1;
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  border-top: 2px solid;
+  background-color: #000;
+}
+
+.lineOne {
+  left: 33%;
+  transform: translateX(-50%);
+}
+
+.lineTwo {
+  left: 66%;
+  transform: translateX(-50%);
 }
 
 @media screen and (min-width:768px) {
@@ -117,21 +144,17 @@
     gap: 10px;
     .labelContainer {
         display: block;
-        
       }
       .circleContainer{
         width: 24px;
         height: 24px;
-        
       }
-      .connectLine {
-          max-width: 60px;
-          margin-left: 0;
-          // width: calc(80px - 60px);
-          margin-left: 15px;
-          margin-right: 10px;
-          flex-grow: 1;
-      }
+      
+    }
+    .connectLine {
+      flex:1;
+      width: 30%;
     }
   }
+  
 }

@@ -14,9 +14,11 @@ li {
 
 @media screen and (min-width:768px) {
 .menuList {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-right: 10%;
     .menuItem {
       border:none;
       transition: none;
