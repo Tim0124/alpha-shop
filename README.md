@@ -1,7 +1,6 @@
 # ALPHA Shop
 這是一個使用 React 打造的購物結帳頁面
----
-![ alpha shop](./alpha-shop.png)
+![ alpha shop](./alpha-shop2.png)
 # 功能
 使用者可以依照步驟填寫表單，完成購物
 # 開始使用
