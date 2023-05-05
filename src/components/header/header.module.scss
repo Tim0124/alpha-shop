@@ -68,18 +68,9 @@
   gap: 15px;
 }
 
-.logoTitle {
-  font-size: 20px;
-}
-
 @media screen and (min-width:768px) {
 
-  .hamburger {
-    display: none;
-      .menuItem {
-        opacity: 1;
-      }
-  }
+  
   .navbar {
     max-width: 1200px;
       width: 100%;
@@ -88,40 +79,40 @@
       align-items: center;
       gap: 10px;
       margin: 0 auto;
-      // padding-left:50px;
-      // padding-right: 50px;
+      .hamburger {
+        display: none;
+  }
       .menuContainer {
         grid-column: 1/2;
-        width: auto;
         position: static;
         transform: none;
         opacity: 1;
         display: flex;
         justify-content: flex-start;
-        
       }
       .hamburgerToggle {
         display: none;
       }
-    }
-  
-    .headerLogo {
+      .headerLogo {
       grid-column: 2/3;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 10px;
+      }
+      .tool {
+        width: auto;
+        transform: none;
+        top: 0;
+        left: 0;
+        position: static;
+        opacity: 1;
+        grid-column: 3/4;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+      }
     }
-    .tool {
-      width: auto;
-      transform: none;
-      top: 0;
-      left: 0;
-      position: static;
-      opacity: 1;
-      grid-column: 3/4;
-      display: flex;
-      justify-content: flex-end;
-      margin-right: 20px;
-    }
+  
+    
 }

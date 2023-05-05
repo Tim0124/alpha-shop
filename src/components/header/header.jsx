@@ -1,7 +1,7 @@
 import style from './header.module.scss'
 import Menu from './menu'
 import Tool from'./tool'
-import HeaderLogo from './headerLogo';
+import ShopLogo from './shopLogo';
 import HamburgerIcon from './hamburger';
 
  function Header() {
@@ -16,7 +16,7 @@ import HamburgerIcon from './hamburger';
             <Menu />
           </div>
         <div className={`${style.headerLogo}`}>
-          <HeaderLogo />
+          <ShopLogo />
         </div>
         <div className={`${style.tool}`}>
           <Tool />

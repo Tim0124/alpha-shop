@@ -6,13 +6,17 @@
     display: none;
   }
   .cartInfo {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 15px;
+    border-top: 1px solid #D8D8D8;
+    padding-top: 10px;
+    font-weight: bold;
   }
 }
 
 @media screen and (min-width:768px) {
   .cartWrapper {
-      
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -36,7 +40,6 @@
         }
       }
     }
-
     .cartInfo {
       text-align: left;
       border-top: 1px solid #D8D8D8;
@@ -48,6 +51,9 @@
       .price {
         font-weight: bold;
       }
+    }
+    .progressControl {
+      display: none;
     }
   }
 }

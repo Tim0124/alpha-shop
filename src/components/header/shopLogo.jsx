@@ -1,6 +1,6 @@
 import { ReactComponent as Logo } from 'public/icons/logo.svg';
 
-function HeaderLogo () {
+function ShopLogo () {
 return (
   <>
     <Logo />
@@ -9,4 +9,4 @@ return (
 )
 }
 
-export default HeaderLogo
+export default ShopLogo

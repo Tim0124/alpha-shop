@@ -5,9 +5,9 @@ import { ReactComponent as Mode } from 'public/icons/mode.svg';
 function Tool () {
   return (
     <>
-      <Search />
-      <Cart />
-      <Mode />
+      <a href="/"><Search /></a>
+      <a href="/"><Cart /></a>
+      <a href="/"><Mode /></a>
     </>
   )
 }

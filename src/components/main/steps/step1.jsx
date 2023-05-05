@@ -1,5 +1,6 @@
 import style from './step1.module.scss'
 import Areas from './areas'
+import ProgressControl from '../progressControl/progressControl'
 
 function Step1() {
   return(
@@ -43,7 +44,9 @@ function Step1() {
       </section>
       </form>
       {/* shipping phase */}
-
+      <section class={`${style.progressControl}`}>
+        <ProgressControl />
+      </section>
     </section>
   )
 }

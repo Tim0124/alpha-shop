@@ -1,7 +1,7 @@
 import style from './cart.module.scss'
 import { Initial } from './initial';
 import Product from './product'
-
+import ProgressControl from '../progressControl/progressControl';
 function Cart () {
   
   return (
@@ -18,7 +18,11 @@ function Cart () {
         <div className={`${style.text}`}>小計</div>
         <div className={`${style.price}`}>$5,298</div>
       </section>
+      <section className={`${style.progressControl}`}>
+      <ProgressControl />
+      </section>
     </section>
+    
   )
 }
 

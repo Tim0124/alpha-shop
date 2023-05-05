@@ -10,7 +10,7 @@ function Product({id, name, img, price, quantity}) {
           <div className={`${style.productName}`}>{name}</div>
           <ProductControl quantity={quantity}/>
         </div>
-        <div className={`${style.price}`}>{price}</div>
+        <div className={`${style.price}`}>${price}</div>
       </div>
     </div>
   )
