@@ -1,6 +1,6 @@
 import './progressControl.scss'
-import { ReactComponent as Arrow } from './arrow.svg';
-import { ReactComponent as ArrowNext } from './arrowNext.svg';
+import { ReactComponent as Arrow } from 'public/icons/arrow.svg';
+import { ReactComponent as ArrowNext } from 'public/icons/arrowNext.svg';
 
 function ProgressControl () {
   return (

@@ -1,32 +1,26 @@
-import './header.scss'
-import './menu.scss'
-import { ReactComponent as Logo } from './logo.svg';
-import { ReactComponent as Tool } from './tools.svg';
-import { ReactComponent as Search } from './search.svg';
-import { ReactComponent as Cart } from './cart.svg';
-import { ReactComponent as Mode } from './mode.svg';
-import { ReactComponent as Hamburger } from './hamburger.svg';
-import Menu from './menu.jsx'
+import style from './header.module.scss'
+import { ReactComponent as Hamburger } from 'public/icons/hamburger.svg';
+import Menu from './menu'
+import Tool from'./tool'
+import HeaderLogo from './headerLogo';
+import HamburgerIcon from './hamburger';
 
  function Header() {
   return (
-      <header className='header'>
-        <nav className='navbar'>
-          <div className="hamburger">
-            <label for='hamburgerToggle' className='hamburgerToggleLabel'>
-            <Hamburger className='hamburger'/>
-            </label>
+      <header className={`${style.header}`}>
+        <nav className={`${style.navbar}`}>
+          <div className={`${style.hamburger}`}>
+            <HamburgerIcon />
           </div>
-          <input type="checkbox" className='hamburgerToggle'id="hamburgerToggle" />
-        <Menu className='menu'/>
-        <div className='headerLogo'>
-          <Logo className='logo'/>
-          <h2 className='logoTitle'>ALPHA Shop</h2>
+          <input type="checkbox" className={`${style.hamburgerToggle}`}id="hamburgerToggle" />
+          <div className={`${style.menuContainer}`}>
+            <Menu />
+          </div>
+        <div className={`${style.headerLogo}`}>
+          <HeaderLogo />
         </div>
-        <div className="tool">
-          <Search />
-          <Cart />
-          <Mode />
+        <div className={`${style.tool}`}>
+          <Tool />
         </div>
         </nav>
       </header>

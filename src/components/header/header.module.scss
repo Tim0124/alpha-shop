@@ -4,41 +4,46 @@
   position: relative;
   display: flex;
   flex-direction: column-reverse;
-  .menu {
-      display: none;
-      width: 100%;
-      position: absolute;
-      top: 100%;
-      transform: translate(-50%);
-      opacity: 0;
-      background-color: #fff;
-      
-    }
   
-    .hamburgerToggle:checked~.menu {
-      display: block;
-      z-index: 1;
-      transform: scale(1, 1);
-      opacity: 1;
-      height: 450%;
-    }
-    .hamburgerToggle:checked~.tool {
-      transform: scale(1, 1);
-      opacity: 1;
-    }
+}
+
+.menuContainer {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  transform: translate(-50%);
+  opacity: 0;
+  background-color: #fff;
+
 }
 
 .tool {
-position: absolute;
-z-index: 1;
-width: 100%;
-top: 480%;
-opacity: 0;
-display: flex;
-justify-content: center;
-gap: 15px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 480%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 
 }
+
+.hamburgerToggle:checked~.menuContainer {
+  display: block;
+  z-index: 1;
+  transform: scale(1, 1);
+  opacity: 1;
+  height: 450%;
+}
+
+.hamburgerToggle:checked~.tool {
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+
 
 
 .headerLogo {
@@ -55,8 +60,9 @@ gap: 15px;
 
 .hamburger {
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 3%;
+  top: 20%;
+  cursor: pointer;
 }
 
 .logoTitle {
@@ -72,14 +78,16 @@ gap: 15px;
       }
   }
   .navbar {
+    max-width: 1200px;
       width: 100%;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
       gap: 10px;
+      margin: 0 auto;
       // padding-left:50px;
       // padding-right: 50px;
-      .menu {
+      .menuContainer {
         grid-column: 1/2;
         width: auto;
         position: static;
