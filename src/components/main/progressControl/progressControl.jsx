@@ -1,12 +1,12 @@
-import './progressControl.scss'
+import style from './progressControl.module.scss'
 import { ReactComponent as Arrow } from 'public/icons/arrow.svg';
 import { ReactComponent as ArrowNext } from 'public/icons/arrowNext.svg';
 
 function ProgressControl () {
   return (
-    <section className="progressControlContainer">
-      <div className="buttonGroup">
-        <button className="next">
+    <section className={`${style.progressControlContainer}`}>
+      <div className={`${style.buttonGroup}`}>
+        <button className={`${style.next}`}>
           下一步&nbsp;&nbsp;
           <ArrowNext/>
         </button>
