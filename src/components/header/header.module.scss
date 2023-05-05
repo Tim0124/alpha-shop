@@ -15,36 +15,22 @@
   transform: translate(-50%);
   opacity: 0;
   background-color: #fff;
-
 }
 
-.tool {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  top: 480%;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
 
-}
 
 .hamburgerToggle:checked~.menuContainer {
   display: block;
   z-index: 1;
   transform: scale(1, 1);
   opacity: 1;
-  height: 450%;
+  height: 600%;
 }
 
 .hamburgerToggle:checked~.tool {
   transform: scale(1, 1);
   opacity: 1;
 }
-
-
-
 
 .headerLogo {
   display: flex;
@@ -54,15 +40,32 @@
   
 }
 
-.hamburgerToggle {
-  opacity: 0;
-}
-
 .hamburger {
   position: absolute;
   left: 3%;
   top: 20%;
   cursor: pointer;
+}
+
+.hamburgerToggle {
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+  position: absolute;
+  right:93%;
+  bottom: 35px;
+  opacity: 0;
+}
+
+.tool {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 640%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .logoTitle {

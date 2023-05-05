@@ -1,5 +1,4 @@
 import style from './header.module.scss'
-import { ReactComponent as Hamburger } from 'public/icons/hamburger.svg';
 import Menu from './menu'
 import Tool from'./tool'
 import HeaderLogo from './headerLogo';
