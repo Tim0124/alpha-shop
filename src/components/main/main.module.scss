@@ -4,9 +4,11 @@
     text-align: left;
     padding-left: 20px;
   }
-  .progressControl {
-    display: none;
-  }
+}
+
+.progressControl {
+  display: flex;
+  margin: 20px;
 }
 
 @media screen and (min-width:768px) {
@@ -23,6 +25,7 @@
       .registerContainer {
         .registerTitle {
           padding-left: 0;
+          font-size: 32px;
         }
         .stepProgress {
           width: 100%;
@@ -46,4 +49,7 @@
     }
     
   }
+    .progressControl {
+      display: none;
+    }
 }

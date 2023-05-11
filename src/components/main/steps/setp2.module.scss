@@ -1,0 +1,69 @@
+.formContainer {
+  margin: 20px;
+  .formTitle {
+    font-size: 24px;
+    margin: 0;
+    text-align: left;
+  }
+}
+
+input[type='radio']:checked {
+  padding: 10px;
+  color: #000;
+  border-radius: 4px;
+  background-color: #000;
+}
+
+.formBody {
+  
+  .formLabel {
+    display: flex;
+    border: 1px solid ;
+    border-radius: 5px;
+    margin-top: 5%;
+    .inputContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .formInput {
+        margin-left: 20px;
+        width: 20px;
+        height: 100%;
+      }
+    }
+    
+    .sendGroup {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+      .sendInfo {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .sendPeriod {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.progressControl {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .formContainer {
+    margin: 50px 10px 0px 0px;
+    .formLabel {
+        width: 75%;
+      .sendGroup {
+        margin: 10px;
+      }
+    }
+  }
+  .progressControl {
+    display: block;
+  }
+}

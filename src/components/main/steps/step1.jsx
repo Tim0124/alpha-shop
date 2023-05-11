@@ -2,7 +2,7 @@ import style from './step1.module.scss'
 import Areas from './areas'
 import ProgressControl from '../progressControl/progressControl'
 
-function Step1() {
+function StepOne() {
   return(
     <section className={`${style.formContainer}`}>
       <form action="" className={`${style.formContent}`}>
@@ -51,4 +51,4 @@ function Step1() {
   )
 }
 
-export default Step1
+export default StepOne

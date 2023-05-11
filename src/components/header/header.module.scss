@@ -30,6 +30,7 @@
 .hamburgerToggle:checked~.tool {
   transform: scale(1, 1);
   opacity: 1;
+  display: flex;
 }
 
 .headerLogo {
@@ -43,8 +44,7 @@
 .hamburger {
   position: absolute;
   left: 3%;
-  top: 20%;
-  cursor: pointer;
+  top: 35%;
 }
 
 .hamburgerToggle {
@@ -63,7 +63,7 @@
   width: 100%;
   top: 640%;
   opacity: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   gap: 15px;
 }
