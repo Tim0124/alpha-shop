@@ -1,0 +1,64 @@
+input {
+  width: 100%;
+  padding-left: 10px;
+}
+
+.formTitle {
+  text-align: left;
+  padding: 0 15px;
+  font-size: 24px;
+}
+
+.formBody {
+  font-size: 12px;
+}
+
+.inputContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 90px);
+  align-items: start;
+  margin: 20px;
+}
+.inputGroup {
+  text-align: left;  
+}
+
+.cardName,
+.cardNumber {
+  grid-column: 1/5;
+}
+
+.cardDate {
+  padding-right: 5%;
+  grid-column: 1/3;
+  
+}
+.cardCCV {
+  padding-left: 5%;
+  grid-column: 3/5;
+}
+
+.progressControl {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .formContainer {
+    margin: 50px 10px 0px 0px;
+  }
+  .formTitle {
+    padding: 0px;
+  }
+  .inputContainer {
+    margin-left: 0;
+  }
+  .cardName,
+  .cardNumber {
+    grid-column: 1/5;
+    width: 65%;
+  }
+  .progressControl {
+    display: block;
+  }
+}

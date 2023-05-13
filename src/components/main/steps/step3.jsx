@@ -35,9 +35,9 @@ function StepThree () {
           </div>
         </section>
       </form>
-      <section class={`${style.progressControl}`}>
+      {/* <section class={`${style.progressControl}`}>
         <ProgressControl />
-      </section>
+      </section> */}
     </section>
   )
 }

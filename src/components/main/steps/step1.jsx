@@ -44,9 +44,7 @@ function StepOne() {
       </section>
       </form>
       {/* shipping phase */}
-      <section class={`${style.progressControl}`}>
-        <ProgressControl />
-      </section>
+      
     </section>
   )
 }

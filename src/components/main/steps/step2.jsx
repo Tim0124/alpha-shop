@@ -1,4 +1,4 @@
-import style from './setp2.module.scss'
+import style from './step2.module.scss'
 import ProgressControl from '../progressControl/progressControl'
 
 function StepTwo () {
@@ -35,9 +35,9 @@ function StepTwo () {
         </section>
         
       </form>
-      <section class={`${style.progressControl}`}>
+      {/* <section class={`${style.progressControl}`}>
         <ProgressControl />
-      </section>
+      </section> */}
     </section>
   )
 }

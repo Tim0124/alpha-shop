@@ -7,9 +7,7 @@
 
 @media screen and (min-width:768px) {
   .progressControlContainer {
-    position: static;
-    border-top: 1px solid #d8d8d8;
-    transform: none;
+    width: 47%;
     display: flex;
     justify-content: space-between;
     margin: 30px 0;
