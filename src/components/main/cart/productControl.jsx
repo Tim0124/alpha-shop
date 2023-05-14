@@ -3,7 +3,6 @@ import { ReactComponent as Reduce } from 'public/icons/reduce.svg';
 import style from './productControl.module.scss'
 import { useState } from 'react';
 
-
 function ProductControl ({ onPriceChange,id}) {
   const [count, setCount] = useState(0)
 
@@ -21,7 +20,7 @@ function ProductControl ({ onPriceChange,id}) {
     }
   }
 
-  //處理點擊Add按鈕，數量加1
+  //處理點擊Add按鈕，數量加1，依照點擊的id加上各別的金額
   function handleAddClick() {
     setCount(prevCount => prevCount + 1)
     console.log(id)

@@ -4,7 +4,7 @@ function ShopLogo () {
 return (
   <>
     <Logo />
-    <h2>ALPHA Shop</h2>
+    <h2 style={{fontWeight:'bolder'}}>ALPHA Shop</h2>
   </>
 )
 }

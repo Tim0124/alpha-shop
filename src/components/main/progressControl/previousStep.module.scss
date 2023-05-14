@@ -1,6 +1,7 @@
 .buttonGroup {
   width: 100%;
   margin-top: 20px;
+  
 }
 .previous {
   width: 100%;
@@ -10,10 +11,12 @@
   background-color: #fff;
   color: #000;
   cursor: pointer;
+  text-align: left;
 }
 
   @media screen and (min-width:768px) {
     .buttonGroup {
+        width: 30%;
         display: block;
         display: flex;
         justify-content: flex-start;

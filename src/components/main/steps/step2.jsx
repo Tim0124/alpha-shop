@@ -1,16 +1,33 @@
 import style from './step2.module.scss'
 import ProgressControl from '../progressControl/progressControl'
+import { useState } from 'react'
 
 function StepTwo () {
+  const[isCheckStand, setIsCheckStand] = useState(true)
+  const[isCheckDHL, setIsCheckDHL] = useState(false)
+
+
+  function handleClickStand () {
+    setIsCheckStand(true)
+    setIsCheckDHL(false)
+  }
+
+  function handleClickDHL () {
+    setIsCheckStand(false)
+    setIsCheckDHL(true)
+  }
+
+  const checked = isCheckStand
+
   return(
     <section className={`${style.formContainer}`}>
       <form action="" className={`${style.formInfo}`}>
         <h3 className={`${style.formTitle}`}>運送方式</h3>
         <section className={`${style.formBody}`}>
-          <label htmlFor="" className={`${style.formLabel}`}>
+          <label for="inputToggle" className={`${style.formLabel}`} style={checked === false ? {border:'1px solid #F0F0F5'}:{}}>
             <div className={`${style.inputContainer}`}>
-              <input id='' type="radio" className={`${style.formInput}`}
-               checked/>
+              <input id='inputToggle' type="radio" className={`${style.formInput}`}
+                onClick={handleClickStand} checked={isCheckStand} />
             </div>
             <div className={`${style.sendGroup}`}>
               <div className={`${style.sendInfo}`}>
@@ -20,9 +37,9 @@ function StepTwo () {
               <div className={`${style.sendPeriod}`}>約3~7個工作天</div>
             </div>
           </label>
-          <label htmlFor="" className={`${style.formLabel}`}>
+          <label for="inputToggleTwo" className={`${style.formLabel}`} style={checked === true ? {border:'1px solid #F0F0F5'}:{}}>
             <div className={`${style.inputContainer}`}>
-              <input id='' type="radio" className={`${style.formInput}`}/>
+              <input id='inputToggleTwo' type="radio" className={`${style.formInput}`} onClick={handleClickDHL} checked={isCheckDHL}/>
             </div>
             <div className={`${style.sendGroup}`}>
               <div className={`${style.sendInfo}`}>
@@ -33,11 +50,7 @@ function StepTwo () {
             </div>
           </label>
         </section>
-        
       </form>
-      {/* <section class={`${style.progressControl}`}>
-        <ProgressControl />
-      </section> */}
     </section>
   )
 }

@@ -12,7 +12,6 @@ function Product({id, name, img, onPriceChange }) {
     onPriceChange(change)
   }
 
-
   return(
     <div className={`${style.productContainer}`}>
       <img src={img} alt={name} className={`${style.cartPhoto}`}/>

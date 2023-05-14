@@ -1,6 +1,5 @@
 import style from './step1.module.scss'
 import Areas from './areas'
-import ProgressControl from '../progressControl/progressControl'
 
 function StepOne() {
   return(
@@ -8,6 +7,7 @@ function StepOne() {
       <form action="" className={`${style.formContent}`}>
       <h2 className={`${style.formTitle}`}>寄送地址</h2>
       <section className={`${style.formBody}`}>
+          
             <div className={`${style.inputGroup} ${style.gender}`}>
               <div className={`${style.inputLabel}`}>稱謂</div>
               <div className={`${style.selectContainer}`}>
@@ -43,8 +43,6 @@ function StepOne() {
           
       </section>
       </form>
-      {/* shipping phase */}
-      
     </section>
   )
 }
