@@ -7,19 +7,24 @@ import { useState } from 'react';
 
 function App() {
   const [step, setStep] = useState(1)
-
-  function handleNextStep() {
-    setStep(step + 1)
+  function handleNextChange() {
+    if (step > 0) {
+      setStep(prevStep => prevStep + 1)
+    }
   }
 
-  function handlePreviousStep () {
-    setStep(step - 1)
+  function handlePreviousChange () {
+    if (step <= 3) {
+      setStep(prevStep => prevStep - 1)
+    }
   }
 
   return (
     <div className="App">
       <Header />
-      <Main step={step} onNextStep={handleNextStep} onPreviousStep={handlePreviousStep}/>
+      <Main onStep={step} 
+            onNext={handleNextChange} 
+            onPrevious={handlePreviousChange}/>
       <Footer />
     </div>
   );

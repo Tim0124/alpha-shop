@@ -5,7 +5,7 @@ function StepThree () {
   return (
     <section className={`${style.formContainer}`}>
       <form action="" className={`${style.formInfo}`}>
-        <h3 className={`${style.formTitle}`}>運送方式</h3>
+        <h3 className={`${style.formTitle}`}>付款資訊</h3>
         <section className={`${style.formBody}`}>
           <div className={`${style.inputContainer}`}>
             <div className={`${style.inputGroup} ${style.cardName}`} >

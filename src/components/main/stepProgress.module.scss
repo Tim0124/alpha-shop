@@ -30,34 +30,19 @@
   }
 }
 
-.circleNumOne::after {
+.circleNumOne {
   color:#fff ;
-  content: '1';
-}
-.circleNumTwo::after {
-  color: #d8d8d8;
-  content: '2';
-}
-.circleNumThree::after {
-  color: #d8d8d8;
-  content: '3';
-}
-
-
-.circleNumOne{
   background-color: #000;
-}
 
+}
 .circleNumTwo {
+  color:#d8d8d8
+
+}
+.circleNumThree{
   color: #d8d8d8;
 
 }
-
-.circleNumThree {
-  color: #d8d8d8;
-
-}
-
 
 .stepTwo {
   padding: 0 10%;
