@@ -4,10 +4,16 @@ import Step1 from './steps/step1'
 import Step2 from './steps/step2'
 import Step3 from './steps/step3'
 import Cart from './cart/cart'
-
 import ProgressControl from './progressControl/progressControl'
+import { useState } from 'react'
+
+const shipping = {
+  free: '免運',
+  DHL:'$500'
+}
 
 function Main ({onStep, onNext, onPrevious}) {
+  
 
   return (
     <main className={`${style.mainWrapper}`}>
@@ -17,7 +23,7 @@ function Main ({onStep, onNext, onPrevious}) {
           <h1 className={`${style.registerTitle}`}>結帳</h1>
           <StepProgress onStep={onStep}/>
           {onStep === 1 && <Step1 />}
-          {onStep === 2 && <Step2 />}
+          {onStep === 2 && <Step2 onShipping={shipping}/>}
           {onStep === 3 && <Step3 />}
         </section>
         </div>

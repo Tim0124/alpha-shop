@@ -3,8 +3,8 @@ import ProductControl from './productControl';
 import { useState } from 'react';
 
 
-function Product({id, name, img, onPriceChange }) {
-  const [productPrice, setProductPrice] = useState(0)
+function Product({id, name, img, onPriceChange, price }) {
+  const [productPrice, setProductPrice] = useState(price)
 
   //將點擊數量後的價格進行加總
   function handlePriceChange (change) {
@@ -21,9 +21,10 @@ function Product({id, name, img, onPriceChange }) {
           <ProductControl 
           onPriceChange={handlePriceChange}
           id={id}
+          price={price}
           />
         </div>
-        <div className={`${style.price}`} onProductPrice={handlePriceChange}>${productPrice}</div>
+        <div className={`${style.price}`} >${price}</div>
       </div>
     </div>
   )

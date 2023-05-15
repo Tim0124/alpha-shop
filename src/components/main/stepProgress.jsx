@@ -2,7 +2,6 @@ import style from './stepProgress.module.scss'
 import { ReactComponent as Check } from 'public/icons/check.svg';
 
 function StepProgress ({onStep}) {
- console.log(onStep)
  const stepOneCheck  = onStep === 1 ? '1' : <Check/>
  const stepTwoCheck = onStep === 3 ? <Check/> : '2'
  const circleNumTwoStyle = {

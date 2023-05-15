@@ -2,14 +2,13 @@ import style from './step2.module.scss'
 import ProgressControl from '../progressControl/progressControl'
 import { useState } from 'react'
 
-function StepTwo () {
+function StepTwo ({onShipping}) {
   const[isCheckStand, setIsCheckStand] = useState(true)
   const[isCheckDHL, setIsCheckDHL] = useState(false)
 
-
   function handleClickStand () {
-    setIsCheckStand(true)
-    setIsCheckDHL(false)
+  setIsCheckStand(true)
+  setIsCheckDHL(false)
   }
 
   function handleClickDHL () {
@@ -32,7 +31,7 @@ function StepTwo () {
             <div className={`${style.sendGroup}`}>
               <div className={`${style.sendInfo}`}>
                 <div className={`${style.sendText}`}>標準運送</div>
-                <div className={`${style.sendPrice}`}>免費</div>
+                <div className={`${style.sendPrice}`}>{onShipping.free}</div>
               </div>
               <div className={`${style.sendPeriod}`}>約3~7個工作天</div>
             </div>
@@ -44,7 +43,7 @@ function StepTwo () {
             <div className={`${style.sendGroup}`}>
               <div className={`${style.sendInfo}`}>
                 <div className={`${style.sendText}`}>DHL 貨運</div>
-                <div className={`${style.sendPrice}`}>$500</div>
+                <div className={`${style.sendPrice}`}>{onShipping.DHL}</div>
               </div>
               <div className={`${style.sendPeriod}`}>48小時內送達</div>
             </div>

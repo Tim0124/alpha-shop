@@ -6,7 +6,7 @@ import {  useState } from 'react';
 function Cart () {
   const [totalPrice, setTotalPrice] = useState(0)
 
-  //最後呈現的總金額
+  //最後加總的金額
   function handleTotalPriceChange(change) {
     setTotalPrice(prePrice => prePrice + change)
   }
@@ -15,7 +15,9 @@ function Cart () {
     <section className={`${style.cartWrapper}`}>
       <h3 className={`${style.cartTitle}`}>購物籃</h3>
       {Initial.map(item => 
-        <Product key={item.id} {...item}  onPriceChange={handleTotalPriceChange}/>
+        <Product key={item.id} {...item}  
+        onPriceChange={handleTotalPriceChange}
+        />
       )}
       <section className={`${style.cartInfo}`}>
         <div className={`${style.text}`}>運費</div>
