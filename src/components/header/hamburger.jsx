@@ -3,7 +3,7 @@ import { ReactComponent as HamburgerIcon } from 'public/icons/hamburger.svg';
 function Hamburger () {
   return (
     <>
-    <label for='hamburgerToggle'>
+    <label htmlFor='hamburgerToggle'>
       <HamburgerIcon />
     </label>
     </>

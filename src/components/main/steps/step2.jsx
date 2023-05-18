@@ -1,5 +1,4 @@
 import style from './step2.module.scss'
-import ProgressControl from '../progressControl/progressControl'
 import { useState } from 'react'
 
 function StepTwo ({onShipping}) {
@@ -23,10 +22,10 @@ function StepTwo ({onShipping}) {
       <form action="" className={`${style.formInfo}`}>
         <h3 className={`${style.formTitle}`}>運送方式</h3>
         <section className={`${style.formBody}`}>
-          <label for="inputToggle" className={`${style.formLabel}`} style={checked === false ? {border:'1px solid #F0F0F5'}:{}}>
+          <label htmlFor="inputToggle" className={`${style.formLabel}`} style={checked === false ? {border:'1px solid #F0F0F5'}:{}}>
             <div className={`${style.inputContainer}`}>
               <input id='inputToggle' type="radio" className={`${style.formInput}`}
-                onClick={handleClickStand} checked={isCheckStand} />
+                onChange={handleClickStand} checked={isCheckStand} />
             </div>
             <div className={`${style.sendGroup}`}>
               <div className={`${style.sendInfo}`}>
@@ -36,9 +35,9 @@ function StepTwo ({onShipping}) {
               <div className={`${style.sendPeriod}`}>約3~7個工作天</div>
             </div>
           </label>
-          <label for="inputToggleTwo" className={`${style.formLabel}`} style={checked === true ? {border:'1px solid #F0F0F5'}:{}}>
+          <label htmlFor="inputToggleTwo" className={`${style.formLabel}`} style={checked === true ? {border:'1px solid #F0F0F5'}:{}}>
             <div className={`${style.inputContainer}`}>
-              <input id='inputToggleTwo' type="radio" className={`${style.formInput}`} onClick={handleClickDHL} checked={isCheckDHL}/>
+              <input id='inputToggleTwo' type="radio" className={`${style.formInput}`} onChange={handleClickDHL} checked={isCheckDHL}/>
             </div>
             <div className={`${style.sendGroup}`}>
               <div className={`${style.sendInfo}`}>

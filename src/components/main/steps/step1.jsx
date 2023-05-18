@@ -11,8 +11,8 @@ function StepOne() {
             <div className={`${style.inputGroup} ${style.gender}`}>
               <div className={`${style.inputLabel}`}>稱謂</div>
               <div className={`${style.selectContainer}`}>
-                <select className={`${style.selected}`} id="">
-                  <option value="mr" selected>先生</option>
+                <select className={`${style.selected}`} defaultValue='mr'>
+                  <option value="mr" >先生</option>
                   <option value="ms">女士</option>
                   <option value="mx">不明</option>
                 </select>

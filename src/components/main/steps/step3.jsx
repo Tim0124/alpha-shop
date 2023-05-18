@@ -1,5 +1,4 @@
 import style from './step3.module.scss'
-import ProgressControl from '../progressControl/progressControl'
 
 function StepThree () {
   return (
@@ -35,9 +34,6 @@ function StepThree () {
           </div>
         </section>
       </form>
-      {/* <section class={`${style.progressControl}`}>
-        <ProgressControl />
-      </section> */}
     </section>
   )
 }
