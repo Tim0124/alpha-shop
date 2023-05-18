@@ -23,7 +23,6 @@ function ProductControl ({ onPriceChange, id, price}) {
   //處理點擊Add按鈕，數量加1，依照點擊的id加上各別的金額
   function handleAddClick() {
     setCount(prevCount => prevCount + 1)
-    console.log(id)
     if(id === '1') {
       onPriceChange(price)
     }if(id ==='2') {
