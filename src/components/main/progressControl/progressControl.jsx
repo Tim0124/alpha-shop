@@ -3,7 +3,7 @@ import Previous from './previousStep';
 import NextStep from './nextStep';
 
 
-function ProgressControl ({onStep, onNext, onPrevious}) {
+function ProgressControl ({onStep, onNext, onPrevious, onFinal}) {
   const progressControlStyle = {
     justifyContent: onStep === 1 && 'end'
   }
@@ -11,7 +11,7 @@ function ProgressControl ({onStep, onNext, onPrevious}) {
   return (
     <section className={`${style.progressControlContainer}`} style={progressControlStyle}>
       {onStep > 1 && <Previous onPrevious={onPrevious} onStep={onStep}/>}
-      <NextStep onNext={onNext} onStep={onStep}/>
+      <NextStep onNext={onNext} onStep={onStep} onFinal={onFinal}/>
     </section>
   )
 }

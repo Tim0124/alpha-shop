@@ -5,6 +5,7 @@ import Main from './components/main/main.jsx'
 import Footer from './components/footer/footer.jsx'
 import { useState } from 'react';
 
+
 function App() {
   const [step, setStep] = useState(1)
   function handleNextChange() {
@@ -22,9 +23,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Main onStep={step} 
-            onNext={handleNextChange} 
-            onPrevious={handlePreviousChange}/>
+        <Main onStep={step} 
+              onNext={handleNextChange} 
+              onPrevious={handlePreviousChange}
+        />
       <Footer />
     </div>
   );

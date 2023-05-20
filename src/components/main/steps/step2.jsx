@@ -1,18 +1,11 @@
 import style from './step2.module.scss'
-import { useState } from 'react'
+import {  useState } from 'react'
 
 function StepTwo ({onShipping}) {
   const[isCheckStand, setIsCheckStand] = useState(true)
-  const[isCheckDHL, setIsCheckDHL] = useState(false)
 
   function handleClickStand () {
-  setIsCheckStand(true)
-  setIsCheckDHL(false)
-  }
-
-  function handleClickDHL () {
-    setIsCheckStand(false)
-    setIsCheckDHL(true)
+  setIsCheckStand(!isCheckStand)
   }
 
   const checked = isCheckStand
@@ -37,7 +30,7 @@ function StepTwo ({onShipping}) {
           </label>
           <label htmlFor="inputToggleTwo" className={`${style.formLabel}`} style={checked === true ? {border:'1px solid #F0F0F5'}:{}}>
             <div className={`${style.inputContainer}`}>
-              <input id='inputToggleTwo' type="radio" className={`${style.formInput}`} onChange={handleClickDHL} checked={isCheckDHL}/>
+              <input id='inputToggleTwo' type="radio" className={`${style.formInput}`} onChange={handleClickStand} checked={!isCheckStand}/>
             </div>
             <div className={`${style.sendGroup}`}>
               <div className={`${style.sendInfo}`}>

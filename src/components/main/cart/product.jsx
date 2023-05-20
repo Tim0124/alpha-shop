@@ -1,6 +1,7 @@
 import style from './product.module.scss'
 import ProductControl from './productControl';
 
+
 function Product({id, name, img, onPriceChange, price }) {
 
   return(
