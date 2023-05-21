@@ -36,7 +36,7 @@ function Main ({onStep, onNext, onPrevious}) {
     })
     setFormState(updateFormState)
   }
-  
+
   //點擊確認下單，印出資訊
   function handleFinalCheck () {
     formState.map((data) => {
@@ -44,7 +44,6 @@ function Main ({onStep, onNext, onPrevious}) {
     })
     return console.log(`總金額:${totalPrice}`)
   }
-  
 
   return (
     <FormContext.Provider value={formState}>

@@ -4,10 +4,7 @@ import { ReactComponent as ArrowNext } from 'public/icons/arrowNext.svg';
 function NextStep ({onNext, onStep, onFinal}) {
   const buttonText = onStep === 3 ? '確認下單' : (<span>下一步 <ArrowNext/></span>)
   function handleClick () {
-    onNext()
-    if(buttonText === '確認下單'){
-    onFinal()
-    }
+   buttonText === '確認下單' ? onFinal() : onNext()
   }
   return (
     <div className={`${style.buttonGroup}`}>

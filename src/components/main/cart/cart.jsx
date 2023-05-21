@@ -1,6 +1,6 @@
 import style from './cart.module.scss'
 import Product from './product'
-import {  useContext, useState } from 'react';
+import {  useContext } from 'react';
 import { CartContext } from 'components/main/context/CartContext.jsx'
 import { TotalContext } from '../context/TotalContext';
 
